@@ -1,0 +1,28 @@
+<div class="row-">
+
+  <div class="col-10 mx-auto">
+
+    <div class="d-flex justify-content-between mb-3">
+      <h2>NOS UTILISATEURS</h2>
+    </div>
+
+    <ng-container *ngIf="users.length > 0">
+      <div *ngFor="let user of users"
+           [routerLink]="['/users',user.identifiant]" class="card mb-3 h-100">
+        <div class="row g-0">
+          <div class="col-md-4 mx-auto">
+            <img [src]="user.avatar" style="width: 250px">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+              <p class="card-text">{{user.email}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+
+</div>

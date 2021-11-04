@@ -1,0 +1,18 @@
+<div class="px-4 py-3 text-center">
+  <h1 class="display-5 fw-bold">Utilisateur</h1>
+</div>
+
+<div *ngIf="user" class="row col-6 card shadow mx-auto my-5 py-2">
+
+  <img [src]="user.avatar">
+
+  <div class="row g-0">
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+        <p class="card-text">{{user.email}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
